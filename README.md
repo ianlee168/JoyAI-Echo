@@ -143,10 +143,10 @@ brew install ffmpeg
 
 Download the JoyAI-Echo release checkpoint and Gemma text encoder:
 
-| File | Description | Size |
-| --- | --- | ---: |
-| `echo-longvideo-release.safetensors` | Full model (transformer + VAE + vocoder) | ~46 GB |
-| `gemma-3-12b/` | Instruction-tuned model (text encoder) | ~24 GB |
+| File | Description | Size | Link |
+| --- | --- | --- | --- |
+| `echo-longvideo-release.safetensors` | Full model (transformer + VAE + vocoder) | ~46 GB |[`JoyAI-Echo`](https://huggingface.co/jdopensource/JoyAI-Echo)  |
+| `gemma-3-12b/` | Instruction-tuned model (text encoder) | ~24 GB | [`gemma-3-12b-it`](https://huggingface.co/google/gemma-3-12b-it) |
 
 Place them under `checkpoints/`:
 
@@ -156,32 +156,11 @@ checkpoints/
 `-- gemma-3-12b/
 ```
 
-Download links:
-
-- JoyAI-Echo release checkpoint: [`jdopensource/JoyAI-Echo`](https://huggingface.co/jdopensource/JoyAI-Echo)
-- Gemma 3 12B text-encoder: [`google/gemma-3-12b-it`](https://huggingface.co/google/gemma-3-12b-it) — instruction-tuned multimodal variant (requires accepting Google's license on HuggingFace)
-
-```bash
-export HF_ENDPOINT=https://hf-mirror.com
-huggingface-cli download --resume-download google/gemma-3-12b-it \
-  --local-dir checkpoints/gemma-3-12b
-```
-
 ### 4. Write a story prompt
 
-Create a JSON file under `prompts/`. Each string is one complete shot description.
+Create a JSON file under `prompts/`. 
 
-```json
-{
-  "prompts": [
-    "A nurse prepares a vaccine syringe with calm precision before administering it to a smiling child.",
-    "The camera cuts to the child's relieved parent, softly lit by a clinic window.",
-    "The scene ends with the nurse updating the record while the child waves goodbye."
-  ]
-}
-```
-
-A single prompt creates a single shot. Multiple prompts create a multi-shot story conditioned through the paired audio-video memory bank.
+Each string is one complete shot description. A single prompt creates a single shot. Multiple prompts create a multi-shot story conditioned through the paired audio-video memory bank.
 
 ### 5. Run inference
 
@@ -244,20 +223,18 @@ For smaller GPUs, reduce resolution/frames:
 python inference.py --num-frames 121 --video-height 480 --video-width 832
 ```
 
-## Troubleshooting
+## TODO List
 
-| Symptom | Fix |
-| --- | --- |
-| 🎧 `ffmpeg: command not found` | Install [`ffmpeg`](https://ffmpeg.org/download.html) or use the conda environment. |
-| 🧩 Checkpoint path errors | Verify `checkpoints/echo-longvideo-release.safetensors` exists, or set `paths.checkpoint` in YAML. |
-| 🔥 CUDA out of memory | Lower `num_frames`, `height`, or `width` via CLI flags. |
-| ⚙️ Import errors | Run from the repo root (`python inference.py`); the script auto-configures `sys.path`. |
+- [x] Release inference code
+- [x] Release model checkpoints
+- [x] Add prompt examples
+- [ ] Release Director Agent 
 
 ## Links
 
-- Project page: `https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/`
-- Repository: `https://github.com/jd-opensource/JoyAI-Echo`
-- huggingface: `https://huggingface.co/jdopensource/JoyAI-Echo`
+- Project page: [`https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/`](https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/)
+- Repository: [`https://github.com/jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo)
+- huggingface: [`https://huggingface.co/jdopensource/JoyAI-Echo`](https://huggingface.co/jdopensource/JoyAI-Echo)
 
 ## Acknowledgements
 
