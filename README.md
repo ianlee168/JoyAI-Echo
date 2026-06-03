@@ -227,6 +227,7 @@ python inference.py --num-frames 121 --video-height 480 --video-width 832
 - [x] Release inference code
 - [x] Release model checkpoints
 - [x] Add prompt examples
+- [ ] Release Echo-SR (Super-resolution)
 - [ ] Release Director Agent 
 
 ## Links
