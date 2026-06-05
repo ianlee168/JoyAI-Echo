@@ -45,6 +45,15 @@ Codes and weights will be open-sourced.
 - 🔊 **Joint audio-video generation**: one pipeline produces synchronized video and audio.
 - 🧠 **Paired cross-modal memory bank**: conditions each new shot on prior visual identity and voice context for story-level consistency.
 
+
+## Current Release Scope
+
+JoyAI-Echo currently focuses on **text-to-video (T2V)** and **multi-shot long-video generation with paired audio-video memory**. The memory used in our official pipeline is built from generated T2V shots.
+
+Please note that **image-to-video (I2V)** is **not supported in the current release**.
+
+We are actively working on I2V support and plan to release it in a future version.
+
 ## Demo Gallery
 
 Explore long-form and short-form JoyAI-Echo cases on the [Project Page](https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/). 🍿
