@@ -156,6 +156,8 @@ checkpoints/
 
 ### 4. Write a story prompt
 
+**Enhance your prompt first.** We provide prompt enhancers — system prompts that expand a short story or idea into well-formed shot prompts: **`prompts/long_story_writer_system_prompt.md`** for long, multi-shot video, and **`prompts/short_story_writer_system_prompt.md`** for single-shot short video. We **strongly recommend** running your input through the matching enhancer before inference; un-enhanced prompts tend to produce noticeably weaker results.
+
 Create a JSON file under `prompts/`. Each file is a single object with a `prompts` list, where **every string is one complete shot**. A single string produces one shot; multiple strings produce a multi-shot story, with each new shot conditioned on the previous ones through the paired audio-video memory bank.
 
 Inside each string, write these parts in order:
@@ -169,7 +171,7 @@ Inside each string, write these parts in order:
 | **Background** | The setting and scene details behind the subject. |
 | **Sound Effects & BGM** | The sounds in the scene and the background music — e.g. room tone, wind, footsteps and fabric, with a soft low music bed under the dialogue or nobackground music |
 
-To turn a story into these shot descriptions automatically, pair an LLM with the story-writer system prompt at `prompts/story_writer_system_prompt.md`. A more convenient prompt-writing workflow will be released as a **director agent** for everyone to use.
+A more convenient prompt-writing workflow will be released as a **director agent** for everyone to use.
 
 ### 5. Run inference
 
