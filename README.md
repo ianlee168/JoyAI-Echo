@@ -255,7 +255,8 @@ python inference.py --num-frames 121 --video-height 480 --video-width 832
 
 - Project page: [`https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/`](https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/)
 - Repository: [`https://github.com/jd-opensource/JoyAI-Echo`](https://github.com/jd-opensource/JoyAI-Echo)
-- huggingface: [`https://huggingface.co/jdopensource/JoyAI-Echo`](https://huggingface.co/jdopensource/JoyAI-Echo)
+- Huggingface: [`https://huggingface.co/jdopensource/JoyAI-Echo`](https://huggingface.co/jdopensource/JoyAI-Echo)
+- Research Group & Research Paper: [`https://github.com/Echo-Team-Joy-Future-Academy-JD`](https://github.com/Echo-Team-Joy-Future-Academy-JD), [Echo-Memory](https://github.com/Echo-Team-Joy-Future-Academy-JD/Echo-Memory), [Echo-Infinity](https://github.com/Echo-Team-Joy-Future-Academy-JD/Echo-Infinity)
 
 ## Acknowledgements
 
