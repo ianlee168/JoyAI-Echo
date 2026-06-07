@@ -16,6 +16,7 @@
   <a href="#quickstart"><b>🚀 Quickstart</b></a> |
   <a href="https://huggingface.co/jdopensource/JoyAI-Echo"><b>🤗 Hugging Face</b></a> |
   <a href="#results"><b>📊 Results</b></a> |
+  <a href="https://github.com/zhuang2002/ComfyUI_JoyAI_Echo"><b>🖥️ ComfyUI</b></a> |
   <a href="#citation"><b>📝 Citation</b></a>
 </p>
 
@@ -45,6 +46,10 @@ Codes and weights will be open-sourced.
 - 🔊 **Joint audio-video generation**: one pipeline produces synchronized video and audio.
 - 🧠 **Paired cross-modal memory bank**: conditions each new shot on prior visual identity and voice context for story-level consistency.
 
+
+## ComfyUI Integration
+
+Recommended ComfyUI node package: **[ComfyUI_JoyAI_Echo](https://github.com/zhuang2002/ComfyUI_JoyAI_Echo)** — faithful to the official inference pipeline with full bf16 precision (no GGUF quantization), per-shot editable prompts with instant video preview, 3-phase GPU memory hot-swap (48GB VRAM), built-in LLM prompt enhancement, and cross-shot memory chaining for story-level consistency.
 
 ## Current Release Scope
 
