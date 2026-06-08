@@ -223,7 +223,7 @@ All inference parameters are managed in `configs/inference.yaml`. The file is or
 Any YAML parameter can be overridden from the command line:
 
 ```bash
-python inference.py --seed 42 --num-frames 121 --video-height 480 --video-width 832
+python inference.py --seed 42 --num-frames 121
 ```
 
 Use a custom config file:
@@ -242,10 +242,10 @@ python inference.py --help
 
 Peak GPU usage is around **46–50 GB** for the default **25 fps x 241 frames x 1280 x 736** setting, so a single H100/A100-class (80 GB) or 48 GB GPU is sufficient.
 
-For smaller GPUs, reduce resolution/frames:
+For smaller GPUs, reduce frames:
 
 ```bash
-python inference.py --num-frames 121 --video-height 480 --video-width 832
+python inference.py --num-frames 121
 ```
 
 ## TODO List
